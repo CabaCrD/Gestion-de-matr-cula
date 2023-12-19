@@ -1,0 +1,129 @@
+/**Author: CabaCrD **/
+
+@charset "UTF-8";
+
+
+/****** BARRA DE NAVEGACION HORIZONTAL ******/
+body{
+	
+	background-color: #f6f5f4;
+	
+}
+.nav {
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a51d2d;
+  left: 50%;
+}
+.nav p {
+  float: left;
+}
+.nav p a {
+	
+  left : 50%;
+  right: 50%;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav p a:hover {
+  background-color: #e5a50a;
+  
+}
+
+h2{
+
+	text-align: center;
+	color:green;
+  
+}
+h3{
+
+	text-align: center;
+	color:blue;
+  
+}
+
+input.error {
+  border-color: red;
+}
+.texto {
+	
+	display:flex;
+	flex-direction: row;
+	justify-content:space-around;	
+	    	
+}
+
+fieldset {
+	
+	background :#deddda;
+	
+}
+.texto p{
+	
+	font-size:16px;
+	font-weight: bold;
+	color:#613583;
+}
+
+.texto label{
+	
+	color:#613583;
+	font-weight: bold;
+}
+
+ .ficha li{
+   font-size: 0.8em;
+ }
+ .botones {
+   display: flex;
+   flex-direction: row;
+   justify-content:center;
+   gap: 10px;
+  
+ }
+ 
+ .botones .send button{ 
+   background: green;
+   color:white;
+   left: 20%;
+   
+ }
+ 
+ .botones .reset button {
+   background: coral;
+   color:white;
+ }
+
+.errores legend{
+	color: yellow;
+	background: black;
+}
+
+.errores fieldset{
+	background : #ed333b;
+	color: white;
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a51d2d;
+  left: 50%;
+}
+footer p{
+	
+  left : 50%;
+  right: 50%;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

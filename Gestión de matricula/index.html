@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<!-- Author: CabaCrD -->
+
+<html>
+  <head>     
+    <meta charset = "UTF-8">  
+    <!-- ENLACE AL ARCHIVO JS Y AL ARCHIVO CSS -->  
+    <link rel="stylesheet" href="stylesParte1.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>formulario de matriculación</title>   
+  </head>
+  <body>
+   <header>
+ <!-- HE HECHO ALGUNOS AJUSTES QUE SIMPLEMENTE DAN UNA APARIENCIA MAS BONITA A LA WEB QUE ESTAMOS ESCRIBIENDO--> 
+   <div class="nav">       
+      <p><a href="#Conocenos">Conócenos</a></p>
+      <p><a href="#Admisiones">Admisiones</a></p>
+      <p><a href="#BecasySubvenciones">Becas y Subvenciones</a></p>
+      <p><a href="#Oferta">Oferta</a></p>
+      <p><a href="#Servicios">Servicios en linea</a></p>
+      <p><a href="#Desarrollo">Desarrollo</a></p>    
+    </div>       
+   </header>  
+   <main>      
+     <h2>Solicitud de estudios de verano</h2>     
+     
+     <!-- ESTA CLASE FICHA SIRVE PARA QUE EL USUARIO SEPA COMO SE RELLENA EL FORMULARIO -->    
+     
+     <section>  
+      <div class="ficha"> 
+                     
+               <ol> 
+               
+                 <li>El campo Nombre, no admitiremos nombres sin vocales y la longitud del mismo debe de estar comprendido entre 2 y 20</li>
+                 <li>En el campo apellidos debemos de controlar lo mismo del punto anterior, pero la longitud será 40 y que además se pasen dos apellidos(al menos dos palabras con un espacio)</li>            
+                 <li>DNI, debe tener 8 números y una letra. Debemos mirar si existen letras que no están admitidas para los DNI y no permitir su entrada</li>              
+                 <li>Código titulación: En este campo insertamos el código de la titulación aportada por el alumno y estará formada por:</li>                                 
+                  
+                   <ol>
+                   
+                     <li>Dos digitos en mayúsculas para el país donde se obtuvo la titulación, no admitimos las letras Ñ,W</li>
+                     <li>3 dígitos numéricos que son el código de la titulación</li>
+                     <li>Una G, una M o una F, que identifican si el título es grado, master o f.p.</li>                  
+                   
+                   </ol>           
+                           
+                 <li>La fecha de nacimiento deberá tener el formato dd/mm/aaaa y deberá ser una fecha anterior a la actual. Además no admitimos a alumnos con una edad inferior a 18 años</li>         
+                 <li> El teléfono deberá comenzar obligatoriamente por 6,7 o por 9, y tener nueve dígitos numéricos</li>
+                 <li> El mail del propietario deberá tener un formato válido para email</li>
+                 <li>Confirmación email. En este campo volvemos a poner el email. En el caso de no coincidir con el otro genera error al darle a enviar</li>
+                 <li>Curso.- Es un cuadro de texto, los valores que admitimos son: IA1, IA2,BD1 o BD2. No admitimos valores diferentes para este campo.</li>                 
+                  
+                   <ul>
+                   
+                     <li>Todos los cursos tienen un precio estandar de 600€.
+                     
+                       <ul>
+                       
+                         <li>Los miembros de familia numerosa podrán disfrutar de un descuento del 30%.	
+                         <li>Los menores de 20 años podrán disfrutar de un descuento del 20%.
+                         
+                       </ul>	
+                       
+                   </ul>
+                                     
+                 <li>Familia numerosa. Admite los valores S o N</li>
+                 <li>Para la cuenta bancaria dispondremos de dos campos:</li>    
+                              
+                   <ol>
+                   
+                     <li>IBAN:Las letras ES(no admitiremos cuentas bancarias de otros países) mas dos dígitos numéricos</li>
+                     <li>Número de cuenta: 20 dígitos numéricos.</li>
+                     
+                   </ol>      
+                              
+                </ol> 
+                         
+          </div>   
+                         
+         </section>
+         
+      <h3>Rellene el siguiente formulario</h3>   
+      
+      <fieldset>   
+      
+      <!--  ENTIENDO QUE TODAS LAS VALIDACIONES SE HARAN A TRAVÉS DE JAVASCRIPT POR LO CUAL NO HE ESCRITO NADA MAS -->  
+      <!--  QUE LO NECESARIO PARA RELLENAR EL FORMULARIO, YA QUE LAS VALIDACIONES COMPLETA LAS HARE EN LA PARTES 2 Y 3 -->    
+      
+     <div class="form">    
+       <form method="post" id="form">       
+        <div class="texto">
+          <!-- DATOS PERSONALES -->                
+         <div class="DatosPersonales">  
+           
+           <p>INFORMACION PERSONAL</p>   
+                            
+           <label for="nombre">*Nombre: </label>
+           <input type="text" name="nombre" id="nombre">                         
+           <p>&nbsp;</p>                  
+           <label for="apellidos">*Apellidos: </label>
+           <input type="text" name="apellidos" id="apellidos">                 
+           <p>&nbsp;</p>                    
+           <label for="fechaNacimiento">*Fecha de nacimiento: </label>
+           <input type="text" size="10" name="fechaNacimiento" id="fechaNacimiento">                        
+           <p>&nbsp;</p>                  
+           <label for="dni">*DNI: </label>
+           <input type="text" size="9" name ="dni" id="dni">                 
+           <p>&nbsp;</p>                                 
+           <label for=codTitulacion>*Código de la titulación: </label>
+           <input type="text" size = "6" name="codTitulacion" id="codTitulacion">       
+            
+         </div>        
+         <!-- DATOS DE CONTACTO -->
+         <div class="InfoContacto">   
+                         
+           <p>CONTACTO</p>
+           <label for="telefono">*Telefono: </label>
+           <input type="text" size ="9" name="telefono" id="telefono">               
+           <p>&nbsp;</p>                 
+           <label for="email">*E-Mail: </label>
+           <input type="text" name="email" id="email">                
+           <p>&nbsp;</p>                  
+           <label for="confirmacionmail">*Confirmacion de email: </label>
+           <input type="text" name="confirmacionmail" id="confirmacionmail">  
+                                   
+        </div>       
+        <!-- CODIGO DEL CURSO Y SELECCION DE FAMILIA NUMEROSA -->             
+        <div class="cursoFamilia">    
+            
+         <p>&nbsp;</p>               
+         <label for="curso">*CURSO : </label>
+         <input type="text" size="3" name="curso" id="curso">                  
+         <p>&nbsp;</p>               
+         <label for="familiaNumerosa">*FAMILIA NUMEROSA: </label>
+         <input type="text" name="familiaNumerosa" id="familiaNumerosa">              
+         <p>&nbsp;</p>                
+          <!-- ENTRADA DEL IBAN DEL ALUMNO -->          
+         <label for="iban">*IBAN </label>
+         <input type="text" size="4" name="LetraIban" id="LetraIban" >
+         <input type="text" size="20" name="NumeroIban" id="NumeroIban">             
+         <p>&nbsp;</p>    
+                    
+        </div>     
+                    
+      </div>     
+           
+         <p>&nbsp;</p>       
+         <!-- BOTONES PARA BORRAR Y ENVIAR FORMULARIO -->
+         <div class="botones">           
+        
+           <div class="send"> 
+           
+             <button type="submit" value="submit" class ="enviar" id ="enviar"> Enviar </button> 
+            
+           </div>                              
+         </div>                
+         <p>&nbsp;</p>                         
+       </form>    
+     </div>  
+       
+   </fieldset> 
+       
+   <strong id="correcciones"></strong>    
+                  
+         <!-- AQUI SE MOSTRARAN LOS ERRORES HEREDADOS DEL SCRIPT -->      
+          
+       </div>       
+                          
+                          
+   </main>    
+   
+   <footer> 
+   
+     <p>Tarea realizada por David Alfonso Cabanillas Cruz</p>  
+     
+   </footer>    
+
+   <script src="validacion.js" ></script>
+
+  </body>
+
+</html>
